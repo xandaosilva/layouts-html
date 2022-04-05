@@ -1,3 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: #f5f7fa;
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px 0;
+  height: 44px;
+}
+.navbar i {
+  font-size: 1.5rem;
+  color: #dadfe6;
+}
+.navbar i:nth-child(1) {
+  color: #fe466d;
+}
+
+.photo-and-actions {
+  height: calc(100vh - 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-and-actions .photo {
+  width: 98vw;
+  height: 85vh;
+  background: url("../img/girl.jpeg") center center/cover;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  color: #eee;
+  box-shadow: 0 2px 10px 0 rgba(136, 136, 136, 0.77);
+}
+.photo-and-actions .photo-text {
+  padding: 15px;
+  background: #020024;
+  background: #020024;
+  background: linear-gradient(180deg, #020024 0%, rgba(35, 34, 65, 0) 0%, rgba(0, 0, 0, 0.7) 52%);
+  border-radius: 10px;
+}
+.photo-and-actions .photo-text .photo-name-and-age {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+.photo-and-actions .photo-text .photo-name-and-age h2:nth-child(2) {
+  margin-left: 10px;
+  font-weight: 500;
+}
+.photo-and-actions .photo-text .photo-bio {
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=styles.css.map */
