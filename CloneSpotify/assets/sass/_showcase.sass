@@ -1,0 +1,24 @@
+@use 'variables'
+
+#showcase
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    color: variables.$text-color
+    background: url('../img/showcase.webp') center center/cover
+    background-color: variables.$bg-transparent
+    background-blend-mode: color
+
+    .showcase-container
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        h2
+            font-size: 5rem
+
+        p
+            margin: 15px 0
+            font-size: 1.1rem
+        

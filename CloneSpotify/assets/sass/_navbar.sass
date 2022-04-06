@@ -1,0 +1,32 @@
+@use 'variables'
+
+#navbar
+    display: flex
+    background-color: variables.$bg-transparent
+    color: variables.$text-color
+    justify-content: center
+    position: fixed
+    top: 0
+    width: 100%
+
+    .navbar-container
+        width: 60%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 20px 0
+
+        .logo
+            height: 40px
+            width: auto
+
+        ul
+            display: flex
+            list-style: none
+            font-weight: bold
+
+            li
+                padding: 0 20px
+
+                &:nth-child(3)
+                    border-right: solid 1px variables.$text-color
