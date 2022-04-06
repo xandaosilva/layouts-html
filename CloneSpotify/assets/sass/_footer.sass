@@ -1,0 +1,86 @@
+@use 'variables'
+
+#footer
+    background: variables.$bg-footer
+    color: variables.$text-color
+    padding: 80px 0
+
+    .footer-content
+        display: flex
+        width: 60%
+        margin: auto
+        justify-content: space-between
+
+        .footer-menu
+            margin: 0 40px
+            list-style: none
+
+            p
+                font-weight: bold
+                text-transform: uppercase
+                color: variables.$text-secondary-color
+                font-size: 0.8rem
+
+            &-item
+                margin: 25px 0
+                transition: all 300ms ease
+
+                &:hover
+                    color: variables.$btn-primary-color
+                    cursor: pointer
+
+        .socials
+            display: flex
+
+            i
+                margin: 0 20px
+                font-size: 1.7rem
+                transition: all 300ms ease
+
+                &:hover
+                    color: variables.$btn-primary-color
+                    cursor: pointer
+
+    .footer-info
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        width: 60%
+        margin: auto
+        font-weight: bold
+        color: variables.$text-secondary-color
+        font-size: 0.75rem
+        padding-top: 50px
+
+        &-items
+            display: flex
+            list-style: none
+
+            .footer-info-item
+                margin: 0 10px
+                transition: all 300ms ease
+
+                &:hover
+                    color: variables.$btn-primary-color
+                    cursor: pointer
+
+        .rights
+
+            .country
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                margin-bottom: 10px
+
+                p
+                    transition: all 300ms ease
+
+                    &:hover
+                        color: variables.$btn-primary-color
+                        cursor: pointer
+
+                .brazil-flag
+                    height: 20px
+                    width: auto
+                    display: inline-block
+                    margin-left: 10px
