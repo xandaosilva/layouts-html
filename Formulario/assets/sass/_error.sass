@@ -1,0 +1,13 @@
+@use 'variables'
+
+.form-control.error
+    input
+        border-color: variables.$error-color
+
+    i.fa-exclamation-circle
+        color: variables.$error-color
+        visibility: visible
+
+    small
+        color: variables.$error-color
+        visibility: visible

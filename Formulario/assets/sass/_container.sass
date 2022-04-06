@@ -1,0 +1,45 @@
+@use 'variables'
+
+.container
+    background-color: variables.$bg-general-color
+    border-radius: 10px
+    box-shadow: 0 2px 5px variables.$shadow-transparent
+    width: 400px
+    max-width: 100%
+    overflow: hidden
+
+    .header
+        background-color: variables.$bg-header-color
+        padding: 20px
+
+    .form
+        padding: 20px
+
+        &-control
+            margin-bottom: 10px
+            padding-bottom: 20px
+            position: relative
+
+            label
+                display: inline-block
+                margin-bottom: 5px
+
+            input
+                border: variables.$border-input
+                display: block
+                border-radius: 10px
+                font-size: 14px
+                width: 100%
+                padding: 10px
+
+            i
+                position: absolute
+                top: 35px
+                right: 10px
+                visibility: hidden
+
+            small
+                position: absolute
+                bottom: 0
+                left: 0
+                visibility: hidden
