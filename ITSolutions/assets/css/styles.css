@@ -12,6 +12,11 @@ a {
   text-decoration: none;
 }
 
+section {
+  width: 100%;
+  padding: 50px;
+}
+
 #navbar {
   width: 100%;
   height: 80px;
@@ -60,10 +65,8 @@ a {
 }
 
 #clients {
-  width: 100%;
   background: #eee;
   color: #111;
-  padding: 50px;
 }
 #clients-container {
   display: grid;
@@ -77,10 +80,8 @@ a {
 }
 
 #features {
-  width: 100%;
   background: #222;
   color: #eee;
-  padding: 50px;
 }
 #features-container {
   width: 100%;
@@ -99,6 +100,48 @@ a {
 #features-container .feature-title {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+#product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#product-container #items {
+  width: 650px;
+}
+#product-container #items .item {
+  display: flex;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+#testimonials {
+  background: #222;
+  color: #eee;
+}
+#testimonials-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#testimonials-container .testimonial {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background: #333;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+#testimonials-container .testimonial-image {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+  margin: 15px;
 }
 
 .headline {
