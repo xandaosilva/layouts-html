@@ -1,4 +1,5 @@
 @use '../1-base/variables'
+@use '../1-base/_base-mixins'
 
 #clients
     background: variables.$secondary-color
@@ -10,6 +11,13 @@
         justify-items: center
         padding: 15px
 
+        @include base-mixins.mobile
+            grid-template-columns: repeat(2, 1fr) 
+
         .client
             display: inline-block
             width: 25%
+
+            @include base-mixins.mobile
+                width: 50%
+            

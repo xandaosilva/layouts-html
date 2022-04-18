@@ -10,6 +10,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 section {
@@ -22,6 +23,12 @@ section {
   height: 80px;
   background: #111;
   color: #eee;
+  position: fixed;
+}
+@media (max-width: 768px) {
+  #navbar {
+    height: 180px;
+  }
 }
 #navbar-container {
   width: 80%;
@@ -31,6 +38,12 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  #navbar-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
 #navbar-container .logo {
   font-size: 2rem;
 }
@@ -39,12 +52,25 @@ section {
   list-style: none;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  #navbar-container #navbar-items {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+}
 #navbar-container #navbar-items li {
   padding: 10px;
 }
+@media (max-width: 768px) {
+  #navbar-container #navbar-items li:nth-child(2) {
+    border-top: solid 1px #333;
+    border-bottom: solid 1px #333;
+  }
+}
 
 #showcase {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +81,11 @@ section {
 }
 #showcase-container {
   text-align: center;
+}
+@media (max-width: 768px) {
+  #showcase-container {
+    padding: 40px;
+  }
 }
 #showcase-container h2 {
   font-size: 2.5rem;
@@ -74,9 +105,19 @@ section {
   justify-items: center;
   padding: 15px;
 }
+@media (max-width: 768px) {
+  #clients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 #clients-container .client {
   display: inline-block;
   width: 25%;
+}
+@media (max-width: 768px) {
+  #clients-container .client {
+    width: 50%;
+  }
 }
 
 #features {
@@ -90,12 +131,22 @@ section {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 50px;
 }
+@media (max-width: 768px) {
+  #features-container {
+    grid-template-columns: 1fr;
+  }
+}
 #features-container .feature {
   display: flex;
   flex-direction: column;
   background: #333;
   padding: 20px;
   border-radius: 5px;
+}
+@media (max-width: 768px) {
+  #features-container .feature:nth-child(2) {
+    margin: 15px 0;
+  }
 }
 #features-container .feature-title {
   font-size: 1.5rem;
@@ -107,14 +158,31 @@ section {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  #product-container {
+    flex-direction: column;
+  }
+}
 #product-container #items {
   width: 650px;
+}
+@media (max-width: 768px) {
+  #product-container #items {
+    width: 90%;
+  }
 }
 #product-container #items .item {
   display: flex;
   padding: 10px;
   margin: 15px 0;
   font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  #product-container #items .item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 #testimonials {
@@ -137,11 +205,52 @@ section {
   margin: 15px 0;
   border-radius: 5px;
 }
+@media (max-width: 768px) {
+  #testimonials-container .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 #testimonials-container .testimonial-image {
   height: 200px;
   width: auto;
   border-radius: 50%;
   margin: 15px;
+}
+
+#gallery {
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+}
+#gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  #gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+#gallery-container .gallery-image {
+  display: inline-block;
+  width: 360px;
+  height: 200px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  #gallery-container .gallery-image {
+    width: 100%;
+  }
+}
+
+#footer {
+  background: #222;
+  color: #eee;
+  padding: 30px;
+  text-align: center;
 }
 
 .headline {

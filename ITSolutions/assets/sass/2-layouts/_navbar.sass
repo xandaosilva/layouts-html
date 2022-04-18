@@ -1,10 +1,15 @@
 @use '../1-base/variables'
+@use '../1-base/_base-mixins'
 
 #navbar
     width: 100%
     height: 80px
     background: variables.$primary-color
     color: variables.$secondary-color
+    position: fixed
+
+    @include base-mixins.mobile
+        height: 180px
 
     &-container
         width: 80%
@@ -14,6 +19,10 @@
         justify-content: space-between
         align-items: center
 
+        @include base-mixins.mobile
+            flex-direction: column
+            padding: 20px
+
         .logo
             font-size: 2rem
 
@@ -22,6 +31,17 @@
             list-style: none
             text-transform: uppercase
 
+            @include base-mixins.mobile
+                flex-direction: column
+                text-align: center
+                width: 100%
+
             li
                 padding: 10px
+                
+                @include base-mixins.mobile
+                    &:nth-child(2)
+                        border-top: variables.$border-mobile
+                        border-bottom: variables.$border-mobile
+
     

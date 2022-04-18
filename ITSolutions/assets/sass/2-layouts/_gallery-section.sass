@@ -1,0 +1,25 @@
+@use '../1-base/variables'
+@use '../1-base/_base-mixins'
+
+#gallery
+    width: 90%
+    margin: auto
+    padding: 50px
+
+    &-container
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 30px
+        justify-items: center
+
+        @include base-mixins.mobile
+            grid-template-columns: 1fr
+
+        .gallery-image
+            display: inline-block
+            width: 360px
+            height: 200px
+            border-radius: 5px
+
+            @include base-mixins.mobile
+                width: 100%
