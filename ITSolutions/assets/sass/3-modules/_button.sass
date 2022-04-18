@@ -1,0 +1,15 @@
+@use '../1-base/variables'
+
+.btn
+    display: inline-block
+    padding: 15px 60px
+    font-size: 1.1rem
+    text-transform: uppercase
+    background: variables.$bg-color
+    color: variables.$text-color
+    border-radius: 5px
+    transition: background 500ms ease
+
+    &:hover
+        cursor: pointer
+        background: variables.$bg-color-hover
