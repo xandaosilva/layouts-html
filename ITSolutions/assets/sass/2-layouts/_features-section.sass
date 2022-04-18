@@ -1,0 +1,25 @@
+@use '../1-base/variables'
+
+#features
+    width: 100%
+    background: variables.$third-color
+    color: variables.$secondary-color
+    padding: 50px 
+
+    &-container
+        width: 100%
+        margin: auto
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 50px
+
+        .feature
+            display: flex
+            flex-direction: column
+            background: variables.$fourth-color
+            padding: 20px
+            border-radius: 5px
+
+            &-title
+                font-size: 1.5rem
+                font-weight: bold
