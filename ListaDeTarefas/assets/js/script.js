@@ -4,6 +4,24 @@ const tasksContainer = document.querySelector(".tasks-container");
 
 const validateInput = () => inputElement.value.trim().length > 0;
 
+const handleClick = (taskContent) => {
+    const tasks = tasksContainer.childNodes;
+
+    for(const task of tasks){
+        if(task.firstChild.isSameNode(taskContent))
+            task.firstChild.classList.toggle("completed");
+    }
+}
+
+const handleDeleteClick = (taskItemContainer, taskContent) => {
+    const tasks = tasksContainer.childNodes;
+
+    for(const task of tasks){
+        if(task.firstChild.isSameNode(taskContent))
+            taskItemContainer.remove();
+    }
+}
+
 const handleAddTask = () => {
     const inputIsValid = validateInput();
 
@@ -14,10 +32,12 @@ const handleAddTask = () => {
 
     const taskContent = document.createElement("p");
     taskContent.innerText = inputElement.value;
+    taskContent.addEventListener("click", () => handleClick(taskContent));
 
     const deleteItem = document.createElement("i");
     deleteItem.classList.add("far");
     deleteItem.classList.add("fa-trash-alt");
+    deleteItem.addEventListener("click", () => handleDeleteClick(taskItemContainer, taskContent));
 
     taskItemContainer.appendChild(taskContent);
     taskItemContainer.appendChild(deleteItem);
