@@ -1,0 +1,10 @@
+@use 'variables'
+
+.error
+    border: 2px solid variables.$error-color !important
+
+    &::placeholder
+        color: variables.$error-color
+
+.completed
+    text-decoration: line-through

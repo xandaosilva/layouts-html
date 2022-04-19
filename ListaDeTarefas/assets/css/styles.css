@@ -5,6 +5,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+.error {
+  border: 2px solid red !important;
+}
+.error::placeholder {
+  color: red;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
 body {
   height: 100vh;
   background: linear-gradient(90deg, #41b883 0%, #00d4ff 100%);
