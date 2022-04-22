@@ -28,6 +28,11 @@ function App() {
     setTasks(newTasks);
   }
 
+  const handleTaskDeletion = (taskId) => {
+    const newTasks = tasks.filter(task => task.id !== taskId);
+    setTasks(newTasks);
+  }
+
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
       if(task.id === taskId)
@@ -43,7 +48,7 @@ function App() {
     <>
       <div className="container">
         <AddTask handleTaskAddition={handleTaskAddition} />
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick}/>
+        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDeletion={handleTaskDeletion}/>
       </div>
     </>
   );
