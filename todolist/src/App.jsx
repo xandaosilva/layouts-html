@@ -2,30 +2,16 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import axios from "axios";
+
 import Tasks from "./components/Tasks";
-import "./App.css";
 import AddTask from "./components/AddTask";
 import Header from "./components/Header";
 import TaskDetails from "./components/TaskDetails";
 
+import "./App.css";
+
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Estudar desenvolvimento web",
-      completed: false
-    },
-    {
-      id: 2,
-      title: "Almoçar",
-      completed: false
-    },
-    {
-      id: 3,
-      title: "Dormir",
-      completed: false
-    }
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -48,10 +34,8 @@ function App() {
 
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
-      if(task.id === taskId)
-        return {...task, completed: !task.completed}
-      else
-        return task;
+      if(task.id === taskId) return {...task, completed: !task.completed}
+      else return task;
     });
 
     setTasks(newTasks);
