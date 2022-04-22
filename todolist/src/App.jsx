@@ -5,6 +5,7 @@ import Tasks from "./components/Tasks";
 import "./App.css";
 import AddTask from "./components/AddTask";
 import Header from "./components/Header";
+import TaskDetails from "./components/TaskDetails";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -57,6 +58,7 @@ function App() {
             </>
           )}
         />
+        <Route path="/:taskTitle" exact component={TaskDetails}/>
       </div>
     </Router>
   );
