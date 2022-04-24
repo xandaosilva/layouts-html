@@ -1,0 +1,93 @@
+@use 'variables'
+
+.clock
+    width: 470px
+    height: 470px
+    background-color: variables.$bg-clock-color
+    border-radius: 50%
+    border: 2px solid variables.$bg-black-color
+    position: relative
+
+    &::after
+        content: ""
+        position: absolute
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        top: 50%
+        left: 50%
+        z-index: 11
+        background-color: variables.$bg-black-color
+        transform: translate(-50%, -50%)
+
+    .number
+        --rotation: 0
+        position: absolute
+        width: 100%
+        height: 100%
+        text-align: center
+        transform: rotate(var(--rotation))
+        font-size: 1.8rem
+        font-weight: 500
+        padding: 15px
+
+        &.number-1
+            --rotation: 30deg
+
+        
+        &.number-2
+            --rotation: 60deg
+
+        &.number-3
+            --rotation: 90deg
+
+        &.number-4
+            --rotation: 120deg
+
+        &.number-5
+            --rotation: 150deg
+
+        &.number-6
+            --rotation: 180deg
+
+        &.number-7
+            --rotation: 210deg
+
+        &.number-8
+            --rotation: 240deg
+
+        &.number-9
+            --rotation: 270deg
+
+        &.number-10
+            --rotation: 300deg
+
+        &.number-11
+            --rotation: 330deg
+
+    .hand
+        --rotation: 0
+        position: absolute
+        bottom: 50%
+        left: 50%
+        background-color: variables.$bg-black-color
+        z-index: 10
+        transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg))
+        transform-origin: bottom
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+
+        &.seconds
+            width: 3px
+            height: 40%
+            background-color: variables.$bg-red-color
+
+        &.minutes
+            width: 7px
+            height: 35%
+            background-color: variables.$bg-black-color
+
+        &.hours
+            width: 10px
+            height: 25%
+            background-color: variables.$bg-black-color
