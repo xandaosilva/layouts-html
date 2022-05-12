@@ -1,4 +1,5 @@
 @use "../1-base/variables"
+@use "../1-base/base-mixins"
 
 #location
     height: 400px
@@ -11,28 +12,52 @@
     color: variables.$text-color
     margin-bottom: 3em
 
+    @include base-mixins.mobile
+        flex-direction: column
+        height: auto
+        text-align: center
+        padding: 2em 0
+
     #address, #about-location
         max-width: 30%
         
     #address
         display: flex
 
+        @include base-mixins.mobile
+            order: 2
+            flex-direction: column
+            max-width: 100%
+
         i
             color: variables.$primary 
             font-size: 4em
             margin-right: 0.5em
+
+            @include base-mixins.mobile
+                margin: 0.3em 0
 
         #address-details
             text-align: center
             font-size: 1.3em
 
     #about-location
+        @include base-mixins.mobile
+            order: 1
+            max-width: 100%
+
         h3
             color: variables.$primary
             font-size: 2.5em
             margin-bottom: 1em
             text-transform: uppercase
 
+            @include base-mixins.mobile
+                margin-bottom: 0
+
         p
             line-height: 1.5em
+
+            @include base-mixins.mobile
+                display: none
     

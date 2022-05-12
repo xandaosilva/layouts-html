@@ -1,4 +1,5 @@
 @use "../1-base/variables"
+@use "../1-base/base-mixins"
 
 #details
     width: 80%
@@ -11,8 +12,17 @@
         gap: 5%
         margin-bottom: 4em
 
+        @include base-mixins.mobile
+            flex-direction: column
+            margin-bottom: 0.5em
+            gap: 0
+
         img
             width: 50%
+
+            @include base-mixins.mobile
+                width: 100%
+                margin: 2em 0
 
         h3
             margin-bottom: 1em
@@ -22,6 +32,9 @@
         .detail-description
             width: 100%
             padding-left: 2em
+
+            @include base-mixins.mobile
+                padding: 0
 
             ul
                 list-style-position: inside
@@ -37,6 +50,17 @@
             font-size: 3em
             font-weight: 700
 
+        img
+            @include base-mixins.mobile
+                display: none
+
     #detail-3
         .detail-description
             justify-self: flex-start
+
+            @include base-mixins.mobile
+                order: 1
+
+        img
+            @include base-mixins.mobile
+                order: 2
