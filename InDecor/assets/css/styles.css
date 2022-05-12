@@ -2,6 +2,79 @@
   font-family: "Montserrat";
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+#event-subscription {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/hrz-5.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+#event-subscription #disclaimer h2, #event-subscription #disclaimer .event-date {
+  color: #eb1ccc;
+}
+#event-subscription #disclaimer h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+#event-subscription #disclaimer .about-event {
+  font-size: 2em;
+  text-transform: uppercase;
+  max-width: 350px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+#event-subscription #disclaimer p {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+#event-subscription #disclaimer .event-date {
+  font-weight: bold;
+}
+#event-subscription #subscription-form {
+  background-color: #95989a;
+  padding: 2em;
+  max-width: 22%;
+}
+#event-subscription #subscription-form p {
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 1em;
+}
+#event-subscription #subscription-form form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+#event-subscription #subscription-form form .form-group label {
+  color: #5d5d5d;
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+#event-subscription #subscription-form form .form-group input, #event-subscription #subscription-form form .form-group select {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background-color: #eb1ccc;
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.btn:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
