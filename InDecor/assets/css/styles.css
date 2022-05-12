@@ -102,6 +102,42 @@
   background-image: url("../img/sqr-3.jpg");
 }
 
+#location {
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/hrz-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  margin-bottom: 3em;
+}
+#location #address, #location #about-location {
+  max-width: 30%;
+}
+#location #address {
+  display: flex;
+}
+#location #address i {
+  color: #eb1ccc;
+  font-size: 4em;
+  margin-right: 0.5em;
+}
+#location #address #address-details {
+  text-align: center;
+  font-size: 1.3em;
+}
+#location #about-location h3 {
+  color: #eb1ccc;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+#location #about-location p {
+  line-height: 1.5em;
+}
+
 .btn {
   background-color: #eb1ccc;
   color: #fff;
