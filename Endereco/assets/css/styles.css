@@ -9,7 +9,7 @@
 
 #checkout-page{
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 /* Message */
@@ -43,4 +43,65 @@
 .alert.alert-light p{
     border-bottom: solid 1px #333;
     padding: 1.2em 0;
+}
+
+/* Steps */
+#order-form-container{
+    padding: 1.5em;
+    max-width: 700px;
+}
+
+#steps{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--border-color);
+    position: relative;
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step i{
+    background-color: var(--secondary-bg-color);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+.step .active{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.step p{
+    color: var(--text-color);
+}
+
+.line{
+    border-bottom: solid 1px var(--border-color);
+    position: absolute;
+    top: 22.5px;
+    width: 90%;
+    left: 5%;
+    z-index: -1;
+}
+
+/* Form header */
+#form-header p{
+    color: var(--text-color);
+}
+
+/* Form */
+#order-form-container input, #order-form-container select{
+    background-color: var(--bg-color);
+    border: solid 2px var(--border-color);
+    color: var(--primary-color);
 }
