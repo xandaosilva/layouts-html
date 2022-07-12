@@ -1,0 +1,52 @@
+* {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: #eceff1;
+    transition: 0.3s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Dark theme */
+
+/* Dark theme */
+.dark, .dark header {
+    background-color: #263238;
+    color: #fff;
+}
+
+.dark .bi-sun {
+    display: none;
+}
+
+.dark .bi-moon {
+    display: block;
+}
+
+.dark .card {
+    background-color: #37474f;
+}
+
+.dark .card-image {
+    background-color: #273035;
+}
+
+.dark .subtitle {
+    color: #67b4f3;
+}
+
+.dark .description {
+    color: #2196f3;
+}
+
+.dark .btn {
+    background-color: #67b4f3;
+}
